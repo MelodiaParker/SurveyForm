@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this survey to let us know how we are doing!</p>
+    <form method="post" id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Please enter your name: <input id="name" name="name" type="text" placeholder="First Last" required /></label>
+        <label for="email" id="email-label">Please enter your email: <input id="email" name="email" type="email" placeholder="name@domain.com" required /></label>
+        <label for="number" id="number-label">Please enter your age (years): <input id="number" type="number" name="number" min="13" max="120" placeholder="13" required/></label>
+      </fieldset>
+      <fieldset>
+        <legend>What type of account do you have?</legend>
+        <label for="personal-account"><input class="inline" id="personal-account" type="radio" name="account-type" value="personal-account" checked /> Personal</label>
+        <label for="business-account"><input class="inline" id="business-account" value="business-account" type="radio" name="account-type" /> Business</label>
+      </fieldset>
+      <fieldset>
+         <label for="dropdown">How would you rate our service?
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Best</option>
+            <option value="2">Good</option>
+            <option value="3">Okay</option>
+            <option value="4">Worst</option>
+          </select>
+        </label>
+        </fieldset>
+<fieldset>
+  <legend>What features do you use the most?</legend>
+        <label for="forum">
+          <input id="forum" class="inline" type="checkbox"  name="forum" value="forum"/> Forum        </label>
+        <label for="chat">
+          <input id="chat" class="inline" type="checkbox"  name="chat" value="chat"/> Chat
+        </label>
+        <label for="discord">
+          <input id="discord" class="inline" type="checkbox" name="discord" value="discord" /> Discord
+        </label>
+        <label for="wiki">
+          <input id="wiki" class="inline" type="checkbox"  name="wiki" value="wiki" /> Wiki
+        </label>
+        </fieldset>
+        <fieldset>
+        <label for="comments">Do you have any additional comments for us?
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Do you have anything else to add?"></textarea>
+        </label>
+      </fieldset>
+      
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
